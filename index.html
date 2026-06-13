@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smokys Grill House — الطعم الأصلي صار أقرب إلكم</title>
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png" media="(min-width:768px)">
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+</head>
+
+<body id="top">
+
+  <!-- LOADING SCREEN -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loader-inner">
+      <img src="./assets/images/smokys-logo-transparent.png" alt="Smokys Grill House" class="loader-logo-img">
+      <div class="loader-bar-wrap">
+        <div class="loader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- HEADER -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <h1>
+        <a href="#" class="logo">
+          <img src="./assets/images/smokys-logo-transparent.png" alt="Smokys Grill House" class="logo-img">
+        </a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li class="nav-item"><a href="#home" class="navbar-link" data-nav-link>Home</a></li>
+          <li class="nav-item"><a href="#about" class="navbar-link" data-nav-link>Our Story</a></li>
+          <li class="nav-item"><a href="#food-menu" class="navbar-link" data-nav-link>Menu</a></li>
+          <li class="nav-item"><a href="#franchise" class="navbar-link" data-nav-link>Order</a></li>
+          <li class="nav-item"><a href="#blog" class="navbar-link" data-nav-link>Blog</a></li>
+          <li class="nav-item"><a href="#contact" class="navbar-link" data-nav-link>Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-btn-group">
+        <button class="search-btn" aria-label="Search" data-search-btn>
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+        <a href="#contact" class="btn btn-hover">Find Us</a>
+        <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
+          <span class="line top"></span>
+          <span class="line middle"></span>
+          <span class="line bottom"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- SEARCH BOX -->
+  <div class="search-container" data-search-container>
+    <div class="search-box">
+      <input type="search" name="search" aria-label="Search here" placeholder="Search menu items, locations..."
+        class="search-input">
+      <button class="search-submit" aria-label="Submit search" data-search-submit-btn>
+        <ion-icon name="search-outline"></ion-icon>
+      </button>
+    </div>
+    <button class="search-close-btn" aria-label="Cancel search" data-search-close-btn></button>
+  </div>
+
+  <main>
+    <article>
+
+      <!-- HERO -->
+      <section class="hero" id="home" style="background-image: url('./assets/images/hero-bg.jpg')">
+        <canvas id="smoke-canvas"></canvas>
+        <div class="hero-overlay"></div>
+
+        <div class="container">
+          <div class="hero-content reveal-left">
+            <h2 class="h1 hero-title">Taste the<br><span class="span">Original</span></h2>
+            <p class="hero-text">الطعم الأصلي صار أقرب إلكم — Authentic flame-grilled flavors crafted fresh daily, now serving Kirkuk &amp; Samarra.</p>
+
+            <div class="hero-btns">
+              <a href="#food-menu" class="btn btn-primary btn-hover">Explore Menu</a>
+              <a href="#contact" class="btn btn-outline">Find Our Branches</a>
+            </div>
+
+            <div class="hero-badges">
+              <div class="hero-badge-item">
+                <ion-icon name="flame-outline"></ion-icon>
+                <span>Flame-Grilled Fresh Daily</span>
+              </div>
+              <div class="hero-badge-item">
+                <ion-icon name="location-outline"></ion-icon>
+                <span>Kirkuk &amp; Samarra</span>
+              </div>
+            </div>
+          </div>
+
+          <figure class="hero-banner reveal-right">
+            <img src="./assets/images/hero-banner-bg.png" width="820" height="716" alt="" aria-hidden="true"
+              class="w-100 hero-img-bg">
+            <img src="./assets/images/hero-banner.png" width="700" height="637" loading="lazy" alt="Smokys BBQ"
+              class="w-100 hero-img">
+          </figure>
+        </div>
+
+        <div class="scroll-indicator">
+          <span class="scroll-label">Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+      <!-- STATS -->
+      <section class="section stats-section">
+        <div class="container">
+          <ul class="stats-list">
+
+            <li class="stats-item reveal-up">
+              <div class="stats-icon"><ion-icon name="location-outline"></ion-icon></div>
+              <div class="stats-data" data-target="2" data-suffix="">0</div>
+              <p class="stats-label">Branches — Kirkuk &amp; Samarra</p>
+            </li>
+
+            <li class="stats-item reveal-up" style="--reveal-delay: 0.1s">
+              <div class="stats-icon"><ion-icon name="people-outline"></ion-icon></div>
+              <div class="stats-data" data-target="17" data-suffix="K+">0</div>
+              <p class="stats-label">Social Community</p>
+            </li>
+
+            <li class="stats-item reveal-up" style="--reveal-delay: 0.2s">
+              <div class="stats-icon"><ion-icon name="flame-outline"></ion-icon></div>
+              <div class="stats-data" data-target="100" data-suffix="%">0</div>
+              <p class="stats-label">Fresh Every Day</p>
+            </li>
+
+            <li class="stats-item reveal-up" style="--reveal-delay: 0.3s">
+              <div class="stats-icon"><ion-icon name="bicycle-outline"></ion-icon></div>
+              <div class="stats-data" data-target="40" data-suffix="min">0</div>
+              <p class="stats-label">Fast Delivery</p>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+      <!-- PROMO / SPECIALTIES -->
+      <section class="section section-divider white promo">
+        <div class="container">
+
+          <p class="section-subtitle reveal-up">Our Specialties</p>
+          <h2 class="h2 section-title reveal-up">Grilled with <span class="span">Fire &amp; Soul</span></h2>
+
+          <ul class="promo-list has-scrollbar">
+
+            <li class="promo-item reveal-up">
+              <div class="promo-card">
+                <div class="card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none">
+                    <g clip-path="url(#p1)" fill="#ff6b35">
+                      <path d="M43.033.002L42.563 0c-7.896 0-15.555 1.546-22.767 4.597-6.965 2.946-13.22 7.163-18.592 12.535l-.043.044c-1.548 1.551-1.546 4.075.004 5.625l2.256 2.257c.754.754 1.76 1.17 2.832 1.17h.001a3.98 3.98 0 0 0 2.834-1.171l.04-.04a1.7 1.7 0 0 1 1.21-.499h.021a1.73 1.73 0 0 1 1.238.537l4.596 4.807c.466.488 1.095.761 1.768.768h.028c.663 0 1.285-.258 1.756-.729.975-.975.993-2.58.04-3.577l-3.308-3.46c-.295-.309-.311-.797-.035-1.087a.76.76 0 0 1 .554-.239h.001a.76.76 0 0 1 .553.236l1.041 1.09c.95.994 2.49 1.079 3.507.195a2.5 2.5 0 0 0 .865-1.787 2.53 2.53 0 0 0-.696-1.858l-.755-.79a1.72 1.72 0 0 1-.454-1.511c.099-.549.444-1.003.944-1.245a46.86 46.86 0 0 1 20.561-4.69l.419.002c1.07.011 2.07-.399 2.827-1.149a3.96 3.96 0 0 0 1.179-2.828V3.984A4 4 0 0 0 43.033.002zM44.325 13.403a.88.88 0 0 0-.878.878v43.292c0 .412-.314.574-.411.614s-.433.147-.724-.144L11.436 27.166a.88.88 0 0 0-1.242 0 .88.88 0 0 0 0 1.242l30.877 30.877c.469.469 1.073.715 1.696.715.314 0 .633-.063.942-.19a2.38 2.38 0 0 0 1.494-2.237V14.281a.88.88 0 0 0-.878-.878z"/>
+                    </g>
+                    <defs><clipPath id="p1"><path fill="#fff" d="M0 0h60v60H0z"/></clipPath></defs>
+                  </svg>
+                </div>
+                <h3 class="h3 card-title">Smokys Burger</h3>
+                <p class="card-text">Signature double-patty burger with melted cheese, fresh vegetables, and our secret Smokys sauce.</p>
+                <img src="./assets/images/promo-1.png" width="300" height="300" loading="lazy" alt="Smokys Burger" class="w-100 card-banner">
+              </div>
+            </li>
+
+            <li class="promo-item reveal-up" style="--reveal-delay: 0.1s">
+              <div class="promo-card">
+                <div class="card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none">
+                    <g clip-path="url(#p2)" fill="#ff6b35">
+                      <path d="M14.837 40.062c0 3.106 2.528 5.634 5.634 5.634s5.634-2.528 5.634-5.634a5.64 5.64 0 0 0-5.634-5.634c-3.106 0-5.634 2.527-5.634 5.634zM27.7 31.244h-8.55a.88.88 0 0 0-.879.878.88.88 0 0 0 .879.879h8.55v14.21H13.242v-14.21h1.819a.88.88 0 0 0 .878-.879.88.88 0 0 0-.878-.878h-1.819v-2.037a10.29 10.29 0 0 1 2.196-6.338c1.602-2.034 2.514-4.579 2.57-7.167l.082-3.787h4.762l.081 3.787a12.08 12.08 0 0 0 2.57 7.167 10.29 10.29 0 0 1 2.196 6.338v2.037z"/>
+                    </g>
+                    <defs><clipPath id="p2"><path fill="#fff" d="M0 0h60v60H0z"/></clipPath></defs>
+                  </svg>
+                </div>
+                <h3 class="h3 card-title">Fresh Drinks</h3>
+                <p class="card-text">Ice-cold fresh lemonades, soft drinks, and refreshing juices — the perfect companion to every meal.</p>
+                <img src="./assets/images/promo-2.png" width="300" height="300" loading="lazy" alt="Fresh Drinks" class="w-100 card-banner">
+              </div>
+            </li>
+
+            <li class="promo-item reveal-up" style="--reveal-delay: 0.2s">
+              <div class="promo-card">
+                <div class="card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none">
+                    <g clip-path="url(#p3)" fill="#ff6b35">
+                      <path d="M30.057 32.375c-5.536 0-10.04 4.504-10.04 10.04s4.504 10.04 10.04 10.04 10.04-4.504 10.04-10.04-4.504-10.04-10.04-10.04zm0 18.322c-4.567 0-8.282-3.715-8.282-8.282s3.715-8.282 8.282-8.282 8.282 3.715 8.282 8.282-3.715 8.282-8.282 8.282z"/>
+                    </g>
+                    <defs><clipPath id="p3"><path fill="#fff" d="M0 0h60v60H0z"/></clipPath></defs>
+                  </svg>
+                </div>
+                <h3 class="h3 card-title">Loaded Fries</h3>
+                <p class="card-text">Golden crispy fries loaded with cheese sauce, grilled toppings, and a drizzle of our signature dip.</p>
+                <img src="./assets/images/promo-3.png" width="300" height="300" loading="lazy" alt="Loaded Fries" class="w-100 card-banner">
+              </div>
+            </li>
+
+            <li class="promo-item reveal-up" style="--reveal-delay: 0.3s">
+              <div class="promo-card">
+                <div class="card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none">
+                    <g clip-path="url(#p4)">
+                      <path d="M2.404 21.56a2.23 2.23 0 0 1 0-3.145l.042-.042A56.54 56.54 0 0 1 20.48 6.214c6.994-2.958 14.423-4.458 22.083-4.458l.454.002h0a2.24 2.24 0 0 1 2.215 2.226v3.218zm-.908 6.202a1.28 1.28 0 0 1 .906-.384h.428a3.75 3.75 0 0 0 1.957.549h46.428a2.01 2.01 0 0 1-2.008-2.008v-.636zm43.51 30.238H13.172c-6.292 0-11.412-5.12-11.412-11.412 0-.818.666-1.484 1.484-1.484h54.984c.819 0 1.484.666 1.484 1.484a11.43 11.43 0 0 1-11.412 11.412z" fill="#ff6b35"/>
+                    </g>
+                    <defs><clipPath id="p4"><path fill="#fff" d="M0 0h60v60H0z"/></clipPath></defs>
+                  </svg>
+                </div>
+                <h3 class="h3 card-title">Crispy Tenders</h3>
+                <p class="card-text">Juicy chicken tenders with a perfectly seasoned crispy coating — served with your choice of dipping sauce.</p>
+                <img src="./assets/images/promo-4.png" width="300" height="300" loading="lazy" alt="Crispy Tenders" class="w-100 card-banner">
+              </div>
+            </li>
+
+            <li class="promo-item reveal-up" style="--reveal-delay: 0.4s">
+              <div class="promo-card">
+                <div class="card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none">
+                    <g clip-path="url(#p5)">
+                      <path d="M57.492 40.5h-9.248l1.652-.602c3.539-1.415 5.333-3.077 5.333-4.942 0-2.867-2.322-3.83-4.371-4.679-.878-.364-1.785-.741-2.529-1.252a.88.88 0 0 0-1.222.226.88.88 0 0 0 .226 1.222c.895.616 1.89 1.029 2.851 1.427 2.099.87 3.287 1.441 3.287 3.055 0 1.029-1.541 2.236-4.228 3.31-3.219 1.287-6.956 1.984-8.485 2.234H2.509A2.51 2.51 0 0 0 0 43.009c0 1.383 1.125 2.509 2.509 2.509h54.983a.75.75 0 1 1 0 1.502H2.509A2.51 2.51 0 0 0 0 43.009z" fill="#ff6b35"/>
+                    </g>
+                    <defs><clipPath id="p5"><path fill="#fff" d="M0 0h60v60H0z"/></clipPath></defs>
+                  </svg>
+                </div>
+                <h3 class="h3 card-title">Smokys Combo Box</h3>
+                <p class="card-text">The box that fixes your mood — burger or tenders, crispy fries, and a cold drink. The full Smokys experience.</p>
+                <img src="./assets/images/promo-5.png" width="300" height="300" loading="lazy" alt="Smokys Combo Box" class="w-100 card-banner">
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section section-divider gray about" id="about">
+        <div class="container">
+
+          <div class="about-banner reveal-left">
+            <img src="./assets/images/about-banner.png" width="509" height="459" loading="lazy" alt="Smokys BBQ Kitchen"
+              class="w-100 about-img">
+            <img src="./assets/images/sale-shape-red.png" width="216" height="226" alt="50% off this week"
+              class="abs-img scale-up-anim">
+          </div>
+
+          <div class="about-content reveal-right">
+
+            <p class="section-subtitle">Our Story</p>
+            <h2 class="h2 section-title">
+              Born in Iraq,
+              <span class="span">Built on Flavor</span>
+            </h2>
+
+            <p class="section-text">
+              Smokys Grill House started with one vision — to bring authentic, flame-grilled flavors
+              closer to you. With branches in Kirkuk and Samarra, every dish we serve carries the same
+              passion and original taste that made our customers fall in love from the very first bite.
+            </p>
+
+            <ul class="about-list">
+              <li class="about-item">
+                <ion-icon name="checkmark-outline"></ion-icon>
+                <span class="span">Fresh Premium Ingredients, Grilled Daily</span>
+              </li>
+              <li class="about-item">
+                <ion-icon name="checkmark-outline"></ion-icon>
+                <span class="span">Eastern &amp; Western Cuisine Under One Roof</span>
+              </li>
+              <li class="about-item">
+                <ion-icon name="checkmark-outline"></ion-icon>
+                <span class="span">Dine-In, Takeout &amp; Fast Delivery</span>
+              </li>
+              <li class="about-item">
+                <ion-icon name="checkmark-outline"></ion-icon>
+                <span class="span">Family Meals &amp; Group Packages Available</span>
+              </li>
+            </ul>
+
+            <button class="btn btn-hover">Order Now</button>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOD MENU -->
+      <section class="section food-menu" id="food-menu">
+        <div class="container">
+
+          <p class="section-subtitle reveal-up">Our Menu</p>
+          <h2 class="h2 section-title reveal-up">
+            Grilled to <span class="span">Perfection</span>
+          </h2>
+          <p class="section-text reveal-up">
+            Every item flame-grilled fresh to order — because real flavor never takes shortcuts.
+          </p>
+
+          <ul class="fiter-list reveal-up">
+            <li><button class="filter-btn active" data-filter="all">All</button></li>
+            <li><button class="filter-btn" data-filter="burger">Burgers</button></li>
+            <li><button class="filter-btn" data-filter="chicken">Chicken</button></li>
+            <li><button class="filter-btn" data-filter="combo">Combos</button></li>
+            <li><button class="filter-btn" data-filter="sides">Sides</button></li>
+          </ul>
+
+          <ul class="food-menu-list" id="menu-list">
+
+            <li data-category="burger" class="menu-item">
+              <div class="food-menu-card">
+                <div class="card-banner">
+                  <img src="./assets/images/food-menu-1.png" width="300" height="300" loading="lazy"
+                    alt="Smokys Classic Burger" class="w-100">
+                  <div class="badge">Best Seller</div>
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+                <div class="wrapper">
+                  <p class="category">Burger</p>
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <h3 class="h3 card-title">Smokys Classic Burger</h3>
+                <div class="price-wrapper">
+                  <p class="price-text">Price:</p>
+                  <data class="price">3,500 IQD</data>
+                </div>
+              </div>
+            </li>
+
+            <li data-category="burger" class="menu-item">
+              <div class="food-menu-card">
+                <div class="card-banner">
+                  <img src="./assets/images/food-menu-2.png" width="300" height="300" loading="lazy"
+                    alt="Double Smash Burger" class="w-100">
+                  <div class="badge">New</div>
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+                <div class="wrapper">
+                  <p class="category">Burger</p>
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <h3 class="h3 card-title">Double Smash Burger</h3>
+                <div class="price-wrapper">
+                  <p class="price-text">Price:</p>
+                  <data class="price">4,500 IQD</data>
+                </div>
+              </div>
+            </li>
+
+            <li data-category="chicken" class="menu-item">
+              <div class="food-menu-card">
+                <div class="card-banner">
+                  <img src="./assets/images/food-menu-3.png" width="300" height="300" loading="lazy"
+                    alt="Crispy Chicken Tenders" class="w-100">
+                  <div class="badge">Popular</div>
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+                <div class="wrapper">
+                  <p class="category">Chicken</p>
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <h3 class="h3 card-title">Crispy Chicken Tenders</h3>
+                <div class="price-wrapper">
+                  <p class="price-text">Price:</p>
+                  <data class="price">3,000 IQD</data>
+                </div>
+              </div>
+            </li>
+
+            <li data-category="chicken" class="menu-item">
+              <div class="food-menu-card">
+                <div class="card-banner">
+                  <img src="./assets/images/food-menu-4.png" width="300" height="300" loading="lazy"
+                    alt="Fried Chicken Box" class="w-100">
+                  <div class="badge">Hot Pick</div>
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+                <div class="wrapper">
+                  <p class="category">Chicken</p>
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <h3 class="h3 card-title">Fried Chicken Box</h3>
+                <div class="price-wrapper">
+                  <p class="price-text">Price:</p>
+                  <data class="price">3,500 IQD</data>
+                </div>
+              </div>
+            </li>
+
+            <li data-category="combo" class="menu-item">
+              <div class="food-menu-card">
+                <div class="card-banner">
+                  <img src="./assets/images/food-menu-5.png" width="300" height="300" loading="lazy"
+                    alt="Smokys Combo Box" class="w-100">
+                  <div class="badge">Best Value</div>
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+                <div class="wrapper">
+                  <p class="category">Combo</p>
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <h3 class="h3 card-title">Smokys Combo Box</h3>
+                <div class="price-wrapper">
+                  <p class="price-text">Price:</p>
+                  <data class="price">5,500 IQD</data>
+                </div>
+              </div>
+            </li>
+
+            <li data-category="sides" class="menu-item">
+              <div class="food-menu-card">
+                <div class="card-banner">
+                  <img src="./assets/images/food-menu-6.png" width="300" height="300" loading="lazy"
+                    alt="Loaded Fries" class="w-100">
+                  <div class="badge">Fan Fave</div>
+                  <button class="btn food-menu-btn">Order Now</button>
+                </div>
+                <div class="wrapper">
+                  <p class="category">Sides</p>
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+                <h3 class="h3 card-title">Loaded Fries</h3>
+                <div class="price-wrapper">
+                  <p class="price-text">Price:</p>
+                  <data class="price">2,000 IQD</data>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+      <!-- CTA BANNER -->
+      <section class="section section-divider white cta" style="background-image: url('./assets/images/hero-bg.jpg')">
+        <div class="container">
+
+          <div class="cta-content reveal-left">
+            <p class="section-subtitle">شهي، مقرمش، ولذيذ</p>
+            <h2 class="h2 section-title">
+              Smokys &mdash; The Box That
+              <span class="span">Fixes Your Mood!</span>
+            </h2>
+            <p class="section-text">
+              Delicious, crispy, and full of flavor — our combo boxes bring the full Smokys experience straight to you. Order now for fast delivery in Kirkuk &amp; Samarra.
+            </p>
+            <button class="btn btn-hover">Order Now</button>
+          </div>
+
+          <figure class="cta-banner reveal-right">
+            <img src="./assets/images/cta-banner.png" width="700" height="637" loading="lazy" alt="Smokys Feast"
+              class="w-100 cta-img">
+            <img src="./assets/images/sale-shape.png" width="216" height="226" loading="lazy"
+              alt="50% off this week" class="abs-img scale-up-anim">
+          </figure>
+
+        </div>
+      </section>
+
+      <!-- HOW TO ORDER SECTION -->
+      <section class="section franchise-section" id="franchise">
+        <div class="container">
+
+          <p class="section-subtitle reveal-up">Easy Ordering</p>
+          <h2 class="h2 section-title reveal-up">Order from <span class="span">Smokys</span> in Minutes</h2>
+          <p class="section-text reveal-up" style="text-align:center; max-width:55ch; margin-inline:auto; margin-block-end:50px;">
+            Getting your favorite Smokys meal is fast and simple — dine in, pick up, or get it delivered hot to your door.
+          </p>
+
+          <ul class="franchise-list">
+
+            <li class="franchise-item reveal-up">
+              <div class="franchise-card">
+                <div class="franchise-icon">
+                  <ion-icon name="restaurant-outline"></ion-icon>
+                </div>
+                <h3 class="h3">Dine In</h3>
+                <p>Visit us at our Kirkuk or Samarra branch and enjoy your meal fresh off the grill in our welcoming space.</p>
+              </div>
+            </li>
+
+            <li class="franchise-item reveal-up" style="--reveal-delay: 0.1s">
+              <div class="franchise-card">
+                <div class="franchise-icon">
+                  <ion-icon name="call-outline"></ion-icon>
+                </div>
+                <h3 class="h3">Call &amp; Collect</h3>
+                <p>Call your nearest branch, place your order, and pick it up hot and fresh — no wait, no hassle.</p>
+              </div>
+            </li>
+
+            <li class="franchise-item reveal-up" style="--reveal-delay: 0.2s">
+              <div class="franchise-card">
+                <div class="franchise-icon">
+                  <ion-icon name="bicycle-outline"></ion-icon>
+                </div>
+                <h3 class="h3">Fast Delivery</h3>
+                <p>Order and get your Smokys feast delivered to your door — hot, fresh, and right on time.</p>
+              </div>
+            </li>
+
+          </ul>
+
+          <!-- HOW IT WORKS -->
+          <div class="process-section reveal-up">
+            <h3 class="h3 process-title">How to Place Your Order</h3>
+            <ol class="process-list">
+              <li class="process-step">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                  <h4 class="step-title">Browse the Menu</h4>
+                  <p class="step-text">Explore our full menu online or check our Instagram @smokys.iq for the latest items.</p>
+                </div>
+              </li>
+              <li class="process-step">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                  <h4 class="step-title">Choose Your Branch</h4>
+                  <p class="step-text">Pick your nearest branch — Kirkuk (Al-Quds Street) or Samarra (Al-Sikak District).</p>
+                </div>
+              </li>
+              <li class="process-step">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                  <h4 class="step-title">Call or Visit</h4>
+                  <p class="step-text">Call us directly or walk in. Our team is ready to take your order with a smile.</p>
+                </div>
+              </li>
+              <li class="process-step">
+                <div class="step-number">04</div>
+                <div class="step-content">
+                  <h4 class="step-title">Enjoy Your Meal</h4>
+                  <p class="step-text">Sit back and enjoy the authentic Smokys taste — flame-grilled, fresh, and unforgettable.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div class="franchise-cta reveal-up">
+            <a href="https://grill-house-menu.micronext.net/online-menu" target="_blank" rel="noopener" class="btn btn-primary btn-hover btn-lg">View Full Menu Online</a>
+            <p class="franchise-invest-text">Kirkuk: 07731977774 &nbsp;|&nbsp; Samarra: 07762377779</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- DELIVERY -->
+      <section class="section section-divider gray delivery">
+        <div class="container">
+
+          <div class="delivery-content reveal-left">
+            <p class="section-subtitle">Lightning Fast</p>
+            <h2 class="h2 section-title">
+              Hot, Fresh &amp; Delivered to <span class="span">Your Door</span>
+            </h2>
+            <p class="section-text">
+              You shouldn't have to wait long for great food. Our delivery team gets your order from the grill to your door — piping hot and packed right, in Kirkuk and Samarra.
+            </p>
+            <button class="btn btn-hover">Order Delivery</button>
+          </div>
+
+          <figure class="delivery-banner reveal-right">
+            <img src="./assets/images/delivery-banner-bg.png" width="700" height="602" loading="lazy" alt="clouds"
+              class="w-100">
+            <img src="./assets/images/delivery-boy.svg" width="1000" height="880" loading="lazy" alt="delivery"
+              class="w-100 delivery-img" data-delivery-boy>
+          </figure>
+
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="section section-divider white testi">
+        <div class="container">
+
+          <p class="section-subtitle reveal-up">What People Say</p>
+          <h2 class="h2 section-title reveal-up">
+            Our Customers <span class="span">Love Smokys</span>
+          </h2>
+          <p class="section-text reveal-up" style="max-width:44ch; margin-inline:auto; margin-block-end:40px;">
+            Don't just take our word for it — hear from real Smokys fans in Kirkuk and Samarra.
+          </p>
+
+          <div class="carousel reveal-up" id="testimonial-carousel">
+            <div class="carousel-track" id="carousel-track">
+
+              <div class="testi-card carousel-slide active-slide">
+                <div class="profile-wrapper">
+                  <figure class="avatar">
+                    <img src="./assets/images/avatar-1.jpg" width="80" height="80" loading="lazy" alt="Ahmed Al-Kirkuki">
+                  </figure>
+                  <div>
+                    <h3 class="h4 testi-name">Ahmed Al-Kirkuki</h3>
+                    <p class="testi-title">Regular Customer — Kirkuk</p>
+                  </div>
+                </div>
+                <blockquote class="testi-text">
+                  "I've tried every burger place in Kirkuk. Smokys is on another level — the flavor, the freshness, the crispiness of the chicken tenders. Worth every dinar, every single time."
+                </blockquote>
+                <div class="rating-wrapper">
+                  <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                </div>
+              </div>
+
+              <div class="testi-card carousel-slide">
+                <div class="profile-wrapper">
+                  <figure class="avatar">
+                    <img src="./assets/images/avatar-2.jpg" width="80" height="80" loading="lazy" alt="Omar Saleh">
+                  </figure>
+                  <div>
+                    <h3 class="h4 testi-name">Omar Saleh</h3>
+                    <p class="testi-title">Loyal Customer — Samarra</p>
+                  </div>
+                </div>
+                <blockquote class="testi-text">
+                  "The combo box is an experience on its own. The burger, the fries, the drink — everything together is perfect. I take my whole family here whenever we go out. Smokys never disappoints."
+                </blockquote>
+                <div class="rating-wrapper">
+                  <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                </div>
+              </div>
+
+              <div class="testi-card carousel-slide">
+                <div class="profile-wrapper">
+                  <figure class="avatar">
+                    <img src="./assets/images/avatar-3.jpg" width="80" height="80" loading="lazy" alt="Zainab Hassan">
+                  </figure>
+                  <div>
+                    <h3 class="h4 testi-name">Zainab Hassan</h3>
+                    <p class="testi-title">Loyal Customer — Kirkuk</p>
+                  </div>
+                </div>
+                <blockquote class="testi-text">
+                  "I ordered Smokys for Eid with my family and it was the best decision. The food was hot on arrival, the portions are generous, and the taste is genuinely amazing. Already planning my next order!"
+                </blockquote>
+                <div class="rating-wrapper">
+                  <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="carousel-controls">
+              <button class="carousel-dot active" data-index="0" aria-label="Slide 1"></button>
+              <button class="carousel-dot" data-index="1" aria-label="Slide 2"></button>
+              <button class="carousel-dot" data-index="2" aria-label="Slide 3"></button>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BANNER -->
+      <section class="section section-divider gray banner">
+        <div class="container">
+          <ul class="banner-list">
+
+            <li class="banner-item banner-lg reveal-left">
+              <div class="banner-card">
+                <img src="./assets/images/banner-1.jpg" width="550" height="450" loading="lazy"
+                  alt="50% Off Smokys Brisket" class="banner-img">
+                <div class="banner-item-content">
+                  <p class="banner-subtitle">50% Off Now!</p>
+                  <h3 class="banner-title">Half Price Brisket — This Weekend Only</h3>
+                  <p class="banner-text">Sale off 50% — this week only</p>
+                  <button class="btn">Order Now</button>
+                </div>
+              </div>
+            </li>
+
+            <li class="banner-item banner-sm reveal-up" style="--reveal-delay: 0.1s">
+              <div class="banner-card">
+                <img src="./assets/images/banner-2.jpg" width="550" height="465" loading="lazy" alt="Smokys Pizza"
+                  class="banner-img">
+                <div class="banner-item-content">
+                  <h3 class="banner-title">BBQ Pizza Special</h3>
+                  <p class="banner-text">Buy 1 Get 1 Free</p>
+                  <button class="btn">Order Now</button>
+                </div>
+              </div>
+            </li>
+
+            <li class="banner-item banner-sm reveal-up" style="--reveal-delay: 0.2s">
+              <div class="banner-card">
+                <img src="./assets/images/banner-3.jpg" width="550" height="465" loading="lazy" alt="Smokys Ribs"
+                  class="banner-img">
+                <div class="banner-item-content">
+                  <h3 class="banner-title">Rib Monday Deal</h3>
+                  <p class="banner-text">30% off all week</p>
+                  <button class="btn">Order Now</button>
+                </div>
+              </div>
+            </li>
+
+            <li class="banner-item banner-md reveal-right">
+              <div class="banner-card">
+                <img src="./assets/images/banner-4.jpg" width="550" height="220" loading="lazy" alt="Smokys Family Feast"
+                  class="banner-img">
+                <div class="banner-item-content">
+                  <h3 class="banner-title">Family Feast Bundle</h3>
+                  <p class="banner-text">Feeds 6 — save $40</p>
+                  <button class="btn">Order Now</button>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+      <!-- BLOG -->
+      <section class="section section-divider white blog" id="blog">
+        <div class="container">
+
+          <p class="section-subtitle reveal-up">Latest News</p>
+          <h2 class="h2 section-title reveal-up">
+            The <span class="span">Smokys</span> Journal
+          </h2>
+          <p class="section-text reveal-up" style="max-width:44ch; margin-inline:auto; margin-block-end:40px;">
+            Fresh news, new arrivals, and the stories behind the flavors you love.
+          </p>
+
+          <ul class="blog-list">
+
+            <li class="reveal-up">
+              <div class="blog-card">
+                <div class="card-banner">
+                  <img src="./assets/images/blog-1.jpg" width="600" height="390" loading="lazy"
+                    alt="Smokys Now in Samarra" class="w-100">
+                  <div class="badge">New Branch</div>
+                </div>
+                <div class="card-content">
+                  <div class="card-meta-wrapper">
+                    <a href="#" class="card-meta-link">
+                      <ion-icon name="calendar-outline"></ion-icon>
+                      <time class="meta-info" datetime="2024-12-01">Dec 01 2024</time>
+                    </a>
+                    <a href="#" class="card-meta-link">
+                      <ion-icon name="person-outline"></ion-icon>
+                      <p class="meta-info">Team Smokys</p>
+                    </a>
+                  </div>
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Smokys Opens Its Second Branch in Samarra — Al-Sikak District</a>
+                  </h3>
+                  <p class="card-text">The original taste has arrived in Samarra. Find us in Al-Sikak District, adjacent to the Advisory Clinic...</p>
+                  <a href="#" class="btn-link">
+                    <span>Read More</span>
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="reveal-up" style="--reveal-delay: 0.1s">
+              <div class="blog-card">
+                <div class="card-banner">
+                  <img src="./assets/images/blog-2.jpg" width="600" height="390" loading="lazy"
+                    alt="The Smokys Combo Box" class="w-100">
+                  <div class="badge">Menu</div>
+                </div>
+                <div class="card-content">
+                  <div class="card-meta-wrapper">
+                    <a href="#" class="card-meta-link">
+                      <ion-icon name="calendar-outline"></ion-icon>
+                      <time class="meta-info" datetime="2025-04-20">Apr 20 2025</time>
+                    </a>
+                    <a href="#" class="card-meta-link">
+                      <ion-icon name="person-outline"></ion-icon>
+                      <p class="meta-info">Smokys Kitchen</p>
+                    </a>
+                  </div>
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Introducing the Smokys Combo Box — The Meal That Fixes Your Mood</a>
+                  </h3>
+                  <p class="card-text">Delicious, crispy, and packed with flavor — our new combo box is everything you need in one box...</p>
+                  <a href="#" class="btn-link">
+                    <span>Read More</span>
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="reveal-up" style="--reveal-delay: 0.2s">
+              <div class="blog-card">
+                <div class="card-banner">
+                  <img src="./assets/images/blog-3.jpg" width="600" height="390" loading="lazy"
+                    alt="Smokys Eid Special" class="w-100">
+                  <div class="badge">Offers</div>
+                </div>
+                <div class="card-content">
+                  <div class="card-meta-wrapper">
+                    <a href="#" class="card-meta-link">
+                      <ion-icon name="calendar-outline"></ion-icon>
+                      <time class="meta-info" datetime="2025-03-28">Mar 28 2025</time>
+                    </a>
+                    <a href="#" class="card-meta-link">
+                      <ion-icon name="person-outline"></ion-icon>
+                      <p class="meta-info">Team Smokys</p>
+                    </a>
+                  </div>
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Celebrate Eid with Smokys — Special Family Meals &amp; Group Packages</a>
+                  </h3>
+                  <p class="card-text">Bring your family to Smokys this Eid — we welcome you with the finest Eastern &amp; Western dishes...</p>
+                  <a href="#" class="btn-link">
+                    <span>Read More</span>
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+
+    <div class="footer-top" style="background-image: url('./assets/images/footer-illustration.png')">
+      <div class="container">
+
+        <div class="footer-brand">
+          <a href="" class="logo">
+            <img src="./assets/images/smokys-logo-transparent.png" alt="Smokys Grill House" class="logo-img footer-logo-img">
+          </a>
+          <p class="footer-text">
+            Smokys Grill House — الطعم الأصلي صار أقرب إلكم. Serving authentic flame-grilled flavor in Kirkuk &amp; Samarra.
+          </p>
+          <ul class="social-list">
+            <li><a href="https://www.facebook.com/p/Smokys-iq-61563356635509/" target="_blank" rel="noopener" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/smokys.iq/" target="_blank" rel="noopener" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-youtube"></ion-icon></a></li>
+          </ul>
+        </div>
+
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Kirkuk Branch</p></li>
+          <li><address class="footer-list-item">Al-Quds Street, adjacent to Al-Sanabel Bakery (2nd Branch)</address></li>
+          <li><p class="footer-list-item">07731977774</p></li>
+          <li><p class="footer-list-item">07731977775</p></li>
+          <li><p class="footer-list-item open-status" id="open-status"></p></li>
+        </ul>
+
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Samarra Branch</p></li>
+          <li><address class="footer-list-item">Al-Sikak District, adjacent to the Advisory Clinic</address></li>
+          <li><p class="footer-list-item">07762377779</p></li>
+          <li><p class="footer-list-item">07752377779</p></li>
+          <li><p class="footer-list-item"><a href="https://grill-house-menu.micronext.net/online-menu" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Order Online Menu</a></p></li>
+        </ul>
+
+        <form action="" class="footer-form" id="reservation-form">
+
+          <p class="footer-list-title">Book a Table</p>
+
+          <div class="input-wrapper">
+            <input type="text" name="full_name" required placeholder="Your Name" aria-label="Your Name" class="input-field">
+            <input type="email" name="email_address" required placeholder="Email" aria-label="Email" class="input-field">
+          </div>
+
+          <div class="input-wrapper">
+            <select name="total_person" aria-label="Total person" class="input-field">
+              <option value="">Party Size</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5">5 Guests</option>
+              <option value="6+">6+ Guests</option>
+            </select>
+            <input type="date" name="booking_date" aria-label="Reservation date" class="input-field">
+          </div>
+
+          <textarea name="message" placeholder="Special requests..." aria-label="Message" class="input-field"></textarea>
+
+          <button type="submit" class="btn">Reserve My Table</button>
+
+        </form>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright-text">
+          &copy; 2025 <a href="#" class="copyright-link">Smokys Grill House</a>. All Rights Reserved. &nbsp;|&nbsp; @smokys.iq
+        </p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast" role="alert" aria-live="polite">
+    <ion-icon name="checkmark-circle-outline"></ion-icon>
+    <span class="toast-msg">Your reservation is confirmed! See you soon.</span>
+  </div>
+
+  <!-- BACK TO TOP -->
+  <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+  <script src="./assets/js/script.js" defer></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
